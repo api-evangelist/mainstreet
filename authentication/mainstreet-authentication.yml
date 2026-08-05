@@ -1,0 +1,113 @@
+generated: '2026-08-04'
+method: probed
+source: https://login.mainstreet.com/.well-known/openid-configuration
+docs: https://login.mainstreet.com/.well-known/openid-configuration
+summary:
+  types:
+  - openIdConnect
+  - oauth2
+  oauth2_flows:
+  - authorization_code
+  - client_credentials
+  - refresh_token
+  - implicit
+  - password
+  - device_code
+  pkce: true
+  pkce_methods:
+  - S256
+  - plain
+  dpop: true
+  mfa: true
+  note: >-
+    MainStreet publishes no public product API and no OpenAPI document. The only
+    machine-readable authentication contract it serves is the OIDC/OAuth 2.0
+    discovery pair on its Auth0-hosted identity domain, which backs sign-in to the
+    client portal (dashboard.mainstreet.com) and the bookkeeping app
+    (books.mainstreet.com). This profile is transcribed from that discovery
+    document — nothing here is inferred.
+schemes:
+- name: MainStreet OIDC (Auth0 tenant)
+  type: openIdConnect
+  openIdConnectUrl: https://login.mainstreet.com/.well-known/openid-configuration
+  issuer: https://login.mainstreet.com/
+  endpoints:
+    authorization: https://login.mainstreet.com/authorize
+    token: https://login.mainstreet.com/oauth/token
+    userinfo: https://login.mainstreet.com/userinfo
+    jwks: https://login.mainstreet.com/.well-known/jwks.json
+    revocation: https://login.mainstreet.com/oauth/revoke
+    registration: https://login.mainstreet.com/oidc/register
+    device_authorization: https://login.mainstreet.com/oauth/device/code
+    backchannel_authentication: https://login.mainstreet.com/bc-authorize
+    mfa_challenge: https://login.mainstreet.com/mfa/challenge
+    global_token_revocation: https://login.mainstreet.com/oauth/global-token-revocation/connection/{connectionName}
+  grant_types:
+  - client_credentials
+  - authorization_code
+  - refresh_token
+  - password
+  - implicit
+  - urn:ietf:params:oauth:grant-type:device_code
+  - urn:ietf:params:oauth:grant-type:token-exchange
+  - urn:ietf:params:oauth:grant-type:jwt-bearer
+  - http://auth0.com/oauth/grant-type/password-realm
+  - http://auth0.com/oauth/grant-type/passwordless/otp
+  - http://auth0.com/oauth/grant-type/mfa-oob
+  - http://auth0.com/oauth/grant-type/mfa-otp
+  - http://auth0.com/oauth/grant-type/mfa-recovery-code
+  authorization_grant_profiles:
+  - urn:ietf:params:oauth:grant-profile:id-jag
+  backchannel_token_delivery_modes:
+  - poll
+  response_types:
+  - code
+  - token
+  - id_token
+  - code token
+  - code id_token
+  - token id_token
+  - code token id_token
+  response_modes:
+  - query
+  - fragment
+  - form_post
+  token_endpoint_auth_methods:
+  - client_secret_basic
+  - client_secret_post
+  - private_key_jwt
+  - none
+  token_endpoint_auth_signing_algs:
+  - RS256
+  - RS384
+  - PS256
+  id_token_signing_algs:
+  - HS256
+  - RS256
+  - PS256
+  code_challenge_methods:
+  - S256
+  - plain
+  dpop_signing_algs:
+  - ES256
+  subject_types:
+  - public
+  backchannel_logout_supported: true
+  backchannel_logout_session_supported: true
+  request_parameter_supported: false
+  request_uri_parameter_supported: false
+  sources:
+  - well-known/mainstreet-openid-configuration.json
+  - well-known/mainstreet-oauth-authorization-server.json
+human_auth:
+  login_url: https://login.mainstreet.com/u/login
+  sign_up_url: https://dashboard.mainstreet.com/welcome
+  note: >-
+    End users authenticate through the hosted Auth0 universal login; there is no
+    published developer API key, personal access token, or partner credential
+    program on MainStreet's public surface.
+x-evidence:
+  fetched: '2026-08-04'
+  url: https://login.mainstreet.com/.well-known/openid-configuration
+  http_status: 200
+  content_type: application/json

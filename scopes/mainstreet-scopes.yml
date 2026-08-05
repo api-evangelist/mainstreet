@@ -1,0 +1,72 @@
+generated: '2026-08-04'
+method: probed
+source: https://login.mainstreet.com/.well-known/openid-configuration
+docs: https://login.mainstreet.com/.well-known/openid-configuration
+note: >-
+  These are the scopes the MainStreet identity host advertises in its OIDC
+  discovery document (an Auth0 tenant). They are the standard OIDC scope set plus
+  Auth0's per-claim scopes — MainStreet publishes no product-specific API scopes,
+  because it publishes no public product API. Nothing below is inferred; every
+  scope is transcribed verbatim from scopes_supported.
+schemes:
+- name: MainStreet OIDC (Auth0 tenant)
+  source: well-known/mainstreet-openid-configuration.json
+  issuer: https://login.mainstreet.com/
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://login.mainstreet.com/authorize
+    tokenUrl: https://login.mainstreet.com/oauth/token
+  - flow: clientCredentials
+    tokenUrl: https://login.mainstreet.com/oauth/token
+  - flow: implicit
+    authorizationUrl: https://login.mainstreet.com/authorize
+  - flow: deviceCode
+    deviceAuthorizationUrl: https://login.mainstreet.com/oauth/device/code
+    tokenUrl: https://login.mainstreet.com/oauth/token
+scopes:
+- scope: openid
+  description: Request an ID token — the base OpenID Connect scope.
+  sources: [well-known/mainstreet-openid-configuration.json]
+- scope: profile
+  description: Access the end user's default profile claims.
+  sources: [well-known/mainstreet-openid-configuration.json]
+- scope: offline_access
+  description: Issue a refresh token so the client can act after the access token expires.
+  sources: [well-known/mainstreet-openid-configuration.json]
+- scope: name
+  description: The end user's full name claim.
+  sources: [well-known/mainstreet-openid-configuration.json]
+- scope: given_name
+  description: The end user's given name claim.
+  sources: [well-known/mainstreet-openid-configuration.json]
+- scope: family_name
+  description: The end user's family name claim.
+  sources: [well-known/mainstreet-openid-configuration.json]
+- scope: nickname
+  description: The end user's nickname claim.
+  sources: [well-known/mainstreet-openid-configuration.json]
+- scope: email
+  description: The end user's email address claim.
+  sources: [well-known/mainstreet-openid-configuration.json]
+- scope: email_verified
+  description: Whether the end user's email address has been verified.
+  sources: [well-known/mainstreet-openid-configuration.json]
+- scope: picture
+  description: The end user's profile picture URL claim.
+  sources: [well-known/mainstreet-openid-configuration.json]
+- scope: created_at
+  description: When the end user's identity record was created.
+  sources: [well-known/mainstreet-openid-configuration.json]
+- scope: identities
+  description: The linked identity providers on the end user's account.
+  sources: [well-known/mainstreet-openid-configuration.json]
+- scope: phone
+  description: The end user's phone number claim.
+  sources: [well-known/mainstreet-openid-configuration.json]
+- scope: address
+  description: The end user's address claim.
+  sources: [well-known/mainstreet-openid-configuration.json]
+x-evidence:
+  fetched: '2026-08-04'
+  url: https://login.mainstreet.com/.well-known/openid-configuration
+  http_status: 200

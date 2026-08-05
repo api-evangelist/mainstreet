@@ -1,0 +1,106 @@
+generated: '2026-08-04'
+method: probed
+source: https://login.mainstreet.com/.well-known/openid-configuration
+summary: >-
+  MainStreet publishes no /.well-known/ discovery surface on its marketing or
+  application hosts. Its identity host (login.mainstreet.com, an Auth0 tenant)
+  serves a complete OIDC + RFC 8414 discovery pair anonymously. The
+  mainstreet.com root, dashboard.mainstreet.com and books.mainstreet.com are
+  single-page-application catch-alls that answer HTTP 200 with an HTML shell for
+  every /.well-known/* path — those are recorded as false positives, not hits.
+hosts:
+- host: https://login.mainstreet.com
+  role: identity / authorization server (Auth0 tenant)
+  documents:
+  - path: /.well-known/openid-configuration
+    standard: OpenID Connect Discovery 1.0
+    status: 200
+    content_type: application/json
+    file: mainstreet-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    standard: RFC 8414
+    status: 200
+    content_type: application/json
+    file: mainstreet-oauth-authorization-server.json
+  - path: /.well-known/jwks.json
+    standard: RFC 7517
+    status: 200
+    note: referenced as jwks_uri in the discovery document
+  - path: /.well-known/security.txt
+    standard: RFC 9116
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/api-catalog
+    standard: RFC 9727
+    status: 404
+- host: https://mainstreet.ai
+  role: marketing + knowledge hub (current operating site)
+  documents:
+  - path: /llms.txt
+    status: 200
+    content_type: text/plain
+    file: ../llms/mainstreet-llms.txt
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /swagger.json
+    status: 404
+- host: https://mainstreet.com
+  role: root domain — currently serves an unrelated holding-company placeholder SPA
+  spa_catch_all: true
+  documents:
+  - path: /.well-known/*
+    status: 200
+    content_type: text/html
+    note: >-
+      Every probed path returns the same HTML shell (title "Mainstreet", meta
+      description "a private holding company investing in durable businesses
+      across key sectors"). Treated as a catch-all false positive — no discovery
+      document exists.
+- host: https://dashboard.mainstreet.com
+  role: customer application (client portal)
+  spa_catch_all: true
+  documents:
+  - path: /.well-known/*
+    status: 200
+    content_type: text/html
+    note: SPA catch-all returns an HTML shell for every path; no discovery document.
+- host: https://books.mainstreet.com
+  role: bookkeeping application
+  spa_catch_all: true
+  documents:
+  - path: /.well-known/*
+    status: 200
+    content_type: text/html
+    note: SPA catch-all returns an HTML shell for every path; no discovery document.
+x-evidence:
+  fetched: '2026-08-04'
+  hosts_probed:
+  - mainstreet.com
+  - www.mainstreet.com
+  - mainstreet.ai
+  - www.mainstreet.ai
+  - login.mainstreet.com
+  - dashboard.mainstreet.com
+  - books.mainstreet.com
+  - api.mainstreet.ai
+  - app.mainstreet.com
+  unresolved_hosts:
+  - api.mainstreet.ai
+  - app.mainstreet.com
+  - api.mainstreet.com
+  - docs.mainstreet.com
+  - developer.mainstreet.com
+  - developers.mainstreet.com

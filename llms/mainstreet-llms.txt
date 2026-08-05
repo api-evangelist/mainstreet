@@ -1,0 +1,55 @@
+# MainStreet
+MainStreet helps technology companies and growing businesses identify,
+calculate, and claim R&D tax credits in partnership with their CPA.
+Average R&D tax credit: $50K+. No cost, no commitment to get started.
+
+## About
+MainStreet is an R&D tax credit platform that handles the entire claim process —
+identifying qualified research expenses (QREs), calculating credits under IRC §41,
+preparing Form 6765, and providing audit-ready documentation.
+
+## Pages
+
+### R&D Tax Credit Platform
+- R&D Tax Credit Calculator & Estimator: /
+- Articles & Resources: /articles/
+
+### Knowledge Hub — Core Guides
+- R&D Tax Credit Guide (What Is the R&D Tax Credit?): /knowledge-hub/rd-tax-credit-guide/
+- R&D Methodology & Form 6765 Filing Guide: /knowledge-hub/methodology-filing-guide/
+- Business Components Documentation Guide: /knowledge-hub/business-components/
+- Section 174 & OBBBA 2025 Guide: /knowledge-hub/section-174-obbba/
+- Section 174 Corrections & Updated Guidance: /knowledge-hub/section-174-corrections/
+- State R&D Tax Credits (9-State Comparison, 2025): /knowledge-hub/state-rd-tax-credits/
+- R&D Credits for Contractors & Funded Research: /knowledge-hub/rd-credits-contractors/
+
+### Knowledge Hub — Startups & Funding
+- Can VC-Backed Startups Claim the R&D Tax Credit?: /knowledge-hub/vc-backed-rd-credit-eligibility/
+- Pre-Revenue Startup R&D Credit Checklist (payroll offset): /knowledge-hub/pre-revenue-startup-rd-credit/
+
+### Knowledge Hub — Comparison & Compliance
+- Federal vs. State R&D Tax Credits: /knowledge-hub/federal-vs-state-rd-credits/
+- R&D Credit Audit & IDR Readiness: /knowledge-hub/rd-credit-audit-readiness/
+
+### Knowledge Hub — Browse & Research
+- Topic Library (18 R&D topics, A–Z): /knowledge-hub/library/
+- R&D Tax Credit Glossary: /knowledge-hub/glossary/
+
+## Key Topics Covered
+- IRC §41 R&D Tax Credit (four-part test, QREs, ASC method, Regular Credit, payroll offset)
+- Section 174 amortization history and OBBBA §174A immediate expensing restoration
+- One Big Beautiful Bill Act (OBBBA) — 2025 legislation affecting R&D deductions
+- Form 6765 filing, 280C election, and IRS documentation requirements
+- Qualified Research Expenses: wages, supplies, contract research, cloud computing costs
+- Business component identification and documentation
+- Amended returns and catch-up deductions (Rev. Proc. 2025-28)
+- State R&D tax credits — California, New York, Texas, Massachusetts, and 30+ other states
+- Federal vs. state R&D credit comparison and stacking on the same QREs
+- Funded research exclusions for contractors and government contract work
+- VC-backed and equity-funded startup eligibility (equity is not "funded research")
+- Pre-revenue startup payroll tax offset (§41(h), up to $500K/year, Form 8974)
+- Audit and IDR readiness, contemporaneous documentation, and refund-claim requirements
+
+## Get Started
+- Schedule a free discovery call: https://calendar.app.google/E8S7bYawduzRX3dr8
+- Create a free MainStreet account: https://dashboard.mainstreet.com/welcome

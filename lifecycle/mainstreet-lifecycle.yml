@@ -1,0 +1,51 @@
+generated: '2026-08-04'
+method: probed
+source: https://mainstreet.ai/
+note: >-
+  Recorded absence is the finding here. MainStreet publishes no API versioning
+  policy, no deprecation or sunset policy, no SLA, and no status page — because it
+  publishes no public product API. The only lifecycle signal on its public surface
+  is the dated company Updates page. Nothing below is inferred; each negative is a
+  probe result.
+versioning:
+  scheme: none-published
+  current: null
+  docs: null
+  note: >-
+    The identity host is an Auth0 tenant and inherits Auth0's own versioning; it is
+    not versioned or documented by MainStreet.
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  note: No deprecation or sunset policy is published on any MainStreet host.
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+status_page_probes:
+- url: https://status.mainstreet.com/
+  result: does-not-resolve
+- url: https://mainstreet.ai/status.html
+  status: 404
+change_communication:
+  updates_page: https://mainstreet.ai/updates.html
+  artifact: changelog/mainstreet-changelog.yml
+  cadence: irregular dated posts
+corporate_lifecycle:
+  founded: 2019
+  acquired_by: Employer.com
+  acquired: '2025-05'
+  acquisition_source: https://techcrunch.com/2025/05/05/employer-com-scoops-up-another-fintech-in-purchase-of-mainstreet-com/
+  note: >-
+    MainStreet operates as a brand within the Employer.com back-office suite after
+    the May 2025 acquisition. The current operating site is mainstreet.ai; the
+    mainstreet.com root domain now serves an unrelated holding-company placeholder,
+    while the login., dashboard. and books. subdomains remain MainStreet's.
+deprecated_operations: []
+x-evidence:
+  fetched: '2026-08-04'
+  hosts_probed:
+  - mainstreet.ai
+  - mainstreet.com
+  - login.mainstreet.com
+  - status.mainstreet.com

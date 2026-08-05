@@ -1,18 +1,68 @@
 aid: mainstreet
 name: MainStreet
-description: 'MainStreet is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'MainStreet is a US small-business tax-credit and back-office platform
+  that identifies, calculates, and files R&D tax credits alongside a client''s CPA.
+  Its service covers qualified research expense (QRE) identification under IRC §41,
+  the IRS four-part test, business-component documentation, Form 6765 preparation
+  (including the mandatory Section G component-level reporting that begins with tax
+  years starting after 31 December 2025), the §41(h) payroll-tax offset for
+  pre-revenue startups, and state R&D credits across 30+ states. Beyond R&D it claims
+  SECURE Act retirement-plan credits, the Small Business Health Care Tax Credit, and
+  the Disabled Access Credit, and it sells adjacent back-office services — entity
+  formation, banking, expense tracking, and bookkeeping and tax filing. MainStreet
+  was founded in 2019 as a venture-backed R&D tax-credit fintech and was acquired by
+  Employer.com in May 2025; the brand now operates as part of that back-office suite.
+  MainStreet ships no public product API, developer portal, or OpenAPI definition —
+  it is an API consumer (payroll data via Finch, document generation via Anvil) rather
+  than an API producer. Its only public machine-readable contract is the OpenID
+  Connect and RFC 8414 discovery pair served by its identity host.'
 url: https://raw.githubusercontent.com/api-evangelist/mainstreet/refs/heads/main/apis.yml
+image: https://www.mainstreet.com/opengraph.jpg
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pipeline
 specificationVersion: '0.20'
 created: '2026-08-04'
 modified: '2026-08-04'
 tags:
 - Company
-apis: []
+- Tax
+- Tax Credits
+- Accounting
+- Financial Services
+- Small Business
+- Fintech
+- Bookkeeping
+- Compliance
+- Payroll
+apis:
+- aid: mainstreet:identity
+  name: MainStreet Identity (OpenID Connect)
+  description: 'The OpenID Connect / OAuth 2.0 authorization surface behind MainStreet
+    sign-in, served from login.mainstreet.com on an Auth0 tenant. It publishes a
+    complete OIDC Discovery 1.0 document and an RFC 8414 authorization-server metadata
+    document anonymously, advertising authorization-code (with PKCE S256), client
+    credentials, refresh token, implicit, password, device code, token exchange and
+    JWT bearer grants, DPoP, back-channel logout, and dynamic client registration.
+    This is identity infrastructure for MainStreet''s own client portal and bookkeeping
+    app — it is not a product API and MainStreet does not document it as a developer
+    integration point.'
+  humanURL: https://login.mainstreet.com/.well-known/openid-configuration
+  baseURL: https://login.mainstreet.com
+  tags:
+  - Authentication
+  - Authorization
+  - OpenID Connect
+  - OAuth
+  - Identity
+  properties:
+  - type: OpenIDConnect
+    url: https://login.mainstreet.com/.well-known/openid-configuration
+  - type: Authentication
+    url: authentication/mainstreet-authentication.yml
+  - type: OAuthScopes
+    url: scopes/mainstreet-scopes.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -20,4 +70,49 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
+  url: https://mainstreet.ai/
+- type: DeveloperPortal
+  url: https://mainstreet.ai/knowledge-hub/
+- type: Documentation
+  url: https://mainstreet.ai/knowledge-hub/library/
+- type: GettingStarted
+  url: https://mainstreet.ai/rd-credit.html
+- type: Support
+  url: https://help.mainstreet.com/
+- type: Blog
+  url: https://mainstreet.ai/articles.html
+- type: Pricing
+  url: https://mainstreet.ai/pricing.html
+- type: SignUp
+  url: https://dashboard.mainstreet.com/welcome
+- type: Login
+  url: https://login.mainstreet.com/u/login
+- type: TermsOfService
+  url: https://mainstreet.ai/terms.html
+- type: PrivacyPolicy
+  url: https://mainstreet.ai/privacy.html
+- type: ChangeLog
+  url: https://mainstreet.ai/updates.html
+- type: ChangeLog
+  url: changelog/mainstreet-changelog.yml
+- type: Authentication
+  url: authentication/mainstreet-authentication.yml
+- type: OAuthScopes
+  url: scopes/mainstreet-scopes.yml
+- type: WellKnown
+  url: well-known/mainstreet-well-known.yml
+- type: LLMsTxt
+  url: llms/mainstreet-llms.txt
+- type: Conformance
+  url: conformance/mainstreet-conformance.yml
+- type: Lifecycle
+  url: lifecycle/mainstreet-lifecycle.yml
+- type: DomainSecurity
+  url: security/mainstreet-domain-security.yml
+- type: SecondaryMarket
   url: https://forgeglobal.com/mainstreet_stock/
+x-enrichment:
+  date: '2026-08-04'
+  status: enriched
+  artifacts_added: 10
+  pass: local-v1

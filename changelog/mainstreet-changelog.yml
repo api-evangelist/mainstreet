@@ -1,0 +1,67 @@
+generated: '2026-08-04'
+method: searched
+source: https://mainstreet.ai/updates.html
+scheme: dated-posts
+note: >-
+  MainStreet publishes a dated company "Updates" page covering product, pricing,
+  compliance and reporting changes to the tax-credit service. It is a business
+  changelog, not an API changelog — there is no versioned API to change. Entries
+  are transcribed verbatim from the UPDATES data embedded in the page; only the
+  recent window is captured, the live page remains the source of truth.
+categories:
+- Pricing
+- Compliance
+- Product
+- Reporting
+current_version: null
+current_version_note: MainStreet publishes no API or platform version number.
+entries:
+- id: pricing-flexible-2026
+  date: '2026-06-24'
+  category: Pricing
+  title: 'More flexible pricing: pick the structure that fits your business'
+  summary: >-
+    Clients can now choose how they pay for an R&D engagement: 15% success-based
+    (no credit, no fee), Pay in Full for the lowest effective rate, 12
+    interest-free monthly payments, or a Flat-Fee option with tiered discounts
+    and up to a 3-year rate lock. Every option includes up to $1M in audit
+    support and protection.
+  breaking: false
+  link: https://mainstreet.ai/pricing.html
+- id: section-g-2026
+  date: '2026-06-20'
+  category: Compliance
+  title: Getting clients ready for mandatory Form 6765 Section G in 2026
+  summary: >-
+    For tax years beginning after 31 December 2025, Section G business-component-level
+    reporting becomes mandatory for most filers. MainStreet updated its process to
+    capture component-level QRE detail in every engagement. Exemptions still apply
+    for qualified small businesses electing the payroll offset and for filers under
+    the $1.5M QRE and $50M gross-receipts tests on an original return.
+  breaking: false
+  link: https://mainstreet.ai/irs-rules.html
+- id: portal-support-2026
+  date: '2026-06-12'
+  category: Product
+  title: Enhanced support inside the MainStreet client portal
+  summary: >-
+    The client portal added in-portal messaging with a dedicated client-success
+    lead, real-time engagement status tracking, secure document upload, and
+    one-click access to the Knowledge Hub.
+  breaking: false
+  link: https://login.mainstreet.com/u/login
+- id: audit-package-2026
+  date: '2026-06-05'
+  category: Reporting
+  title: New enhanced audit substantiation package for every client
+  summary: >-
+    Every engagement now includes an audit-ready documentation package:
+    business-component-level QRE breakdowns, four-part test memos, contemporaneous
+    documentation, Section G-ready reporting, and IDR response support.
+  breaking: false
+  link: https://mainstreet.ai/schedule.html
+x-evidence:
+  fetched: '2026-08-04'
+  url: https://mainstreet.ai/updates.html
+  http_status: 200
+  entries_captured: 4
