@@ -30,6 +30,17 @@ tags:
 - Tax
 - Tax Credits
 - Accounting
+- Financial-Services
+- Small Business
+- Fintech
+- Bookkeeping
+- Compliance
+- Payroll
+tags_raw:
+- Company
+- Tax
+- Tax Credits
+- Accounting
 - Financial Services
 - Small Business
 - Fintech
@@ -51,6 +62,11 @@ apis:
   humanURL: https://login.mainstreet.com/.well-known/openid-configuration
   baseURL: https://login.mainstreet.com
   tags:
+  - Authentication
+  - Authorization
+  - OpenID Connect
+  - Identity
+  tags_raw:
   - Authentication
   - Authorization
   - OpenID Connect
