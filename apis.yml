@@ -17,6 +17,17 @@ description: 'MainStreet is a US small-business tax-credit and back-office platf
   than an API producer. Its only public machine-readable contract is the OpenID
   Connect and RFC 8414 discovery pair served by its identity host.'
 url: https://raw.githubusercontent.com/api-evangelist/mainstreet/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.mainstreet.com/opengraph.jpg
 x-type: company
 x-source: harvest:secondary-market
