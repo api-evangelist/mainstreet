@@ -64,5 +64,99 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-MainStreet is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/mainstreet_stock/
+MainStreet is a US small-business tax-credit and back-office platform that identifies, calculates, and files R&D tax credits alongside a client's CPA. Its service covers qualified research expense (QRE) identification under IRC §41, the IRS four-part test, business-component documentation, Form 6765 preparation (including the mandatory Section G component-level reporting that begins with tax years starting after 31 December 2025), the §41(h) payroll-tax offset for pre-revenue startups, and state R&D credits across 30+ states. Beyond R&D it claims SECURE Act retirement-plan credits, the Small Business Health Care Tax Credit, and the Disabled Access Credit, and it sells adjacent back-office services — entity formation, banking, expense tracking, and bookkeeping and tax filing. MainStreet was founded in 2019 as a venture-backed R&D tax-credit fintech and was acquired by Employer.com in May 2025; the brand now operates as part of that back-office suite. MainStreet ships no public product API, developer portal, or OpenAPI definition — it is an API consumer (payroll data via Finch, document generation via Anvil) rather than an API producer. Its only public machine-readable contract is the OpenID Connect and RFC 8414 discovery pair served by its identity host.
+
+**Areas:** Company · Tax · Tax Credits · Accounting · Financial Services · Small Business · Fintech · Bookkeeping · Compliance · Payroll
+
+## MainStreet on APIs.io
+
+Everything profiled for MainStreet is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/mainstreet/](https://apis.io/providers/mainstreet/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [MainStreet Identity (OpenID Connect)](https://apis.io/apis/mainstreet/identity/) — The OpenID Connect / OAuth 2.0 authorization surface behind MainStreet sign-in, served from login.mainstreet.com on an Auth0 tenant. It publishes a complete…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Mainstreet Authentication](https://apis.io/security/mainstreet/mainstreet-authentication/)
+- [Mainstreet Domain Security](https://apis.io/security/mainstreet/mainstreet-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Mainstreet Scopes](https://apis.io/scopes/mainstreet/mainstreet-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://mainstreet.ai/)
+- [Documentation](https://mainstreet.ai/knowledge-hub/library/)
+- [Getting started](https://mainstreet.ai/rd-credit.html)
+- [Pricing](https://mainstreet.ai/pricing.html)
+- [Sign up](https://dashboard.mainstreet.com/welcome)
+- [Support](https://help.mainstreet.com/)
+- [Changelog](https://mainstreet.ai/updates.html)
+- [Blog](https://mainstreet.ai/articles.html)
+- [Terms of service](https://mainstreet.ai/terms.html)
+- [Privacy policy](https://mainstreet.ai/privacy.html)
+
+## API Evangelist rating
+
+**Kin Score 31.5** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 50.0 |
+| Access clarity | 38.2 |
+
+**Agent readiness 15.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+
+**Regulatory alignment 34.3** — Employment & Payroll
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/mainstreet/](https://apis.io/providers/mainstreet/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for MainStreet: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/mainstreet/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
